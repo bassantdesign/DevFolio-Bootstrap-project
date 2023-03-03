@@ -1,0 +1,473 @@
+:root{
+    --main-color: #0078ff;
+    --secondary-color: #cde1f8;
+    --third-color: #fff;
+    --fourth-color: #f5f5f5;
+    --fivth-color: #4e4e4e;
+    --sixth-color: #1e1e1e;
+    --main-transition: all 0.6s;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+/* START NAVABAR SECTION */
+.navbar-b .navbar-brand {
+    font-size: 1.6rem;
+}
+.nav-link{
+    color: var(--third-color);
+}
+.nav-link:focus, .nav-link:hover{
+    color: var(--third-color);
+}
+.navbar-nav a.active{
+    position: relative;
+}
+.navbar-nav a.active::after{
+    content: "";
+    width: 2.1rem;
+    height: 0.1rem;
+    position: absolute;
+    left: 9px;
+    bottom: 0;
+    background-color: var(--third-color);
+}
+.navbar .navbar-nav .nav-item a:not(a.active){
+    position: relative;
+}
+.navbar .navbar-nav .nav-item a:not(a.active)::after{
+    content: "";
+    width: 0px;
+    height: 0.1rem;
+    position: absolute;
+    left: 9px;
+    bottom: 0px;
+    background-color: var(--third-color);
+    transition: var(--main-transition);
+}
+.navbar .navbar-nav .nav-item a:not(a.active):hover:after{
+    width: 50%;
+}
+/* END NAVABAR SECTION */
+
+/* START NAVABAR Media SECTION */
+@media screen and (max-width: 768px) {
+    .navbar .navbar-nav .nav-item a:not(a.active):hover:after{
+        width: 8%;
+        left: 2px;
+    }
+    .navbar-nav a.active::after{
+        width: 35px;
+        left: 2px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .navbar .navbar-nav .nav-item a:not(a.active):hover:after{
+        width: 8%;
+        left: 2px;
+    }
+    .navbar-nav a.active::after{
+        width: 35px;
+        left: 2px;
+    }
+}
+/* END NAVABAR Media SECTION */
+
+/* START HEADER SECTION */
+#home{
+    background-image: url(../images/intro-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+#home .layer{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#home h1{
+    font-size: 3.2rem;
+}
+#home .content p::after{
+    content: "|";
+    animation-name: movieText;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+@keyframes movieText{
+    1%{content: "|"}
+    2%{content: "C|"}
+    3%{content: "CE|"}
+    4%{content: "CEO|"}
+    4.5%{content: "CEO |"}
+    5%{content: "CEO D|"}
+    6%{content: "CEO De|"}
+    7%{content: "CEO Dev|"}
+    8%{content: "CEO DevF|"}
+    9%{content: "CEO DevFo|"}
+    10%{content: "CEO DevFol|"}
+    11%{content: "CEO DevFoli|"}
+    12%{content: "CEO DevFolio|"}
+    13%{content: "CEO DevFoli|"}
+    14%{content: "CEO DevFol|"}
+    15%{content: "CEO DevFo|"}
+    16%{content: "CEO DevF|"}
+    17%{content: "CEO Dev|"}
+    18%{content: "CEO De|"}
+    19%{content: "CEO D|"}
+    19.5%{content: "CEO |"}
+    20%{content: "CEO|"}
+    21%{content: "CE|"}
+    22%{content: "C|"}
+    22.5%{content: "|"}
+    23%{content: "W|"}
+    24%{content: "We|"}
+    25%{content: "Web|"}
+    26%{content: "Web D|"}
+    27%{content: "Web De|"}
+    28%{content: "Web Dev|"}
+    29%{content: "Web Deve|"}
+    30%{content: "Web Devel|"}
+    31%{content: "Web Develo|"}
+    32%{content: "Web Develop|"}
+    33%{content: "Web Develope|"}
+    34%{content: "Web Developer|"}
+    35%{content: "Web Develope|"}
+    36%{content: "Web Develop|"}
+    37%{content: "Web Develo|"}
+    38%{content: "Web Devel|"}
+    39%{content: "Web Deve|"}
+    40%{content: "Web Dev|"}
+    40.5%{content: "Web De|"}
+    41%{content: "Web Des|"}
+    42%{content: "Web Desi|"}
+    43%{content: "Web Desig|"}
+    44%{content: "Web Design|"}
+    45%{content: "Web Designe|"}
+    46%{content: "Web Designer|"}
+    47%{content: "Web Designe|"}
+    48%{content: "Web Design|"}
+    49%{content: "Web Desig|"}
+    50%{content: "Web Desi|"}
+    51%{content: "Web Des|"}
+    52%{content: "Web De|"}
+    53%{content: "Web D|"}
+    53.5%{content: "Web |"}
+    54%{content: "Web|"}
+    55%{content: "We|"}
+    56%{content: "W|"}
+    56.5%{content: "|"}
+    57%{content: "F|"}
+    58%{content: "Fr|"}
+    59%{content: "Fro|"}
+    60%{content: "Fron|"}
+    61%{content: "Front|"}
+    62%{content: "Front D|"}
+    63%{content: "Front De|"}
+    64%{content: "Front Dev|"}
+    65%{content: "Front Deve|"}
+    66%{content: "Front Devel|"}
+    67%{content: "Front Develo|"}
+    68%{content: "Front Develop|"}
+    69%{content: "Front Develope|"}
+    70%{content: "Front Developer|"}
+    71%{content: "Front Develope|"}
+    72%{content: "Front Develop|"}
+    73%{content: "Front Develo|"}
+    74%{content: "Front Devel|"}
+    75%{content: "Front Deve|"}
+    76%{content: "Front Dev|"}
+    77%{content: "Front De|"}
+    78%{content: "Front D|"}
+    78.5%{content: "Front |"}
+    79%{content: "Front|"}
+    79.5%{content: "Fron|"}
+    80%{content: "Fro|"}
+    80.5%{content: "Fr|"}
+    81%{content: "F|"}
+    81.5%{content: "|"}
+    82%{content: "G|"}
+    82.5%{content: "Gr|"}
+    83%{content: "Gra|"}
+    83.5%{content: "Grap|"}
+    84%{content: "Graph|"}
+    85%{content: "Graphi|"}
+    86%{content: "Graphic|"}
+    86.5%{content: "Graphic |"}
+    87%{content: "Graphic D|"}
+    88%{content: "Graphic De|"}
+    88.5%{content: "Graphic Des|"}
+    89%{content: "Graphic Desi|"}
+    89.5%{content: "Graphic Desig|"}
+    90%{content: "Graphic Design|"}
+    91%{content: "Graphic Designe|"}
+    92%{content: "Graphic Designer|"}
+    92.5%{content: "Graphic Designe|"}
+    93%{content: "Graphic Design|"}
+    93.5%{content: "Graphic Desig|"}
+    94%{content: "Graphic Desi|"}
+    94.5%{content: "Graphic Des|"}
+    95%{content: "Graphic De|"}
+    95.5%{content: "Graphic D|"}
+    96%{content: "Graphic|"}
+    96.5%{content: "Graphi|"}
+    97%{content: "Graph|"}
+    97.5%{content: "Grap|"}
+    98%{content: "Gra|"}
+    99%{content: "Gr|"}
+    99.5%{content: "G|"}
+    100%{content: "|"}
+}
+/* END HEADER SECTION */
+
+/* START ABOUT SECTION */
+#about{
+    background-color: var(--fourth-color);
+}
+#about .about-content{
+    background-color: var(--third-color);
+    box-shadow: 0 2px 16px rgb(0, 0, 0, 0.2);
+}
+#about .content-skill ul{
+    list-style-type: none;
+}
+.skills .progress{
+    border-radius: 0;
+    background-color: var(--secondary-color);
+}
+/* END ABOUT SECTION */
+
+/* START SERVICES SECTION */
+#services{
+    background-color: var(--fourth-color);
+}
+#services .services-info{
+    box-shadow: 0 13px 8px -10px rgb(0, 0, 0, 0.2);
+}
+#services .services-icon .icon{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 8px solid var(--main-color);
+    background-color:var(--third-color);
+    transition: var(--main-transition);
+}
+#services .services-info p{
+    color: var(--fivth-color);
+}
+#services .services-info:hover .icon{
+    background-color:var(--main-color);
+    border: 8px solid var(--secondary-color);
+}
+#services .services-info:hover i{
+    color: var(--third-color);
+}
+/* END SERVICES SECTION */
+
+/* START COUNTER SECTION */
+#counter{
+    background-image: url(../images/counters-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#counter .layer{
+    background-color: rgb(0, 120, 255, 0.7)
+}
+#counter .counter-box{
+    color: #fff;
+}
+#counter .counter-icon .icon{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 8px solid var(--secondary-color);
+}
+/* END COUNTER SECTION */
+
+/* START WORK SECTION */
+#work{
+    background-color: var(--fourth-color);
+}
+#work a{
+    text-decoration: none;
+}
+#work a.custom-link{
+    color: var(--main-color);
+}
+#work .work-icon .icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+}
+#work .work-icon .icon i{
+    color: var(--main-color);
+}
+#work .card-image{
+    overflow: hidden;
+}
+#work .card-image img{
+    transition: all 1s;
+}
+#work .work-box{
+    box-shadow: 0 13px 8px -10px rgb(0, 0, 0, 0.2);
+}
+#work .work-box:hover img{
+    transform: scale(1.2);
+}
+#work .card-info h3{
+    font-size: 1.1rem
+}
+/* END WORK SECTION */
+
+/* START SLIDER SECTION */
+#slider{
+    background-image: url(../images/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#slider .layer{
+    background-color: rgb(0, 120, 255, 0.7)
+}
+#slider .carousel-item .item p{
+    font-size: 1.7rem;
+    padding: 0 2.9rem;
+    color: var(--third-color);
+}
+#slider .slider-icon .icon{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--third-color);
+}
+#slider .slider-icon .icon i{
+    color: var(--main-color);
+}
+.carousel-indicators [data-bs-target]{
+    width: 1.6rem;
+    height: 0.4rem;
+    background-color: var(--secondary-color);
+}
+/* END SLIDER SECTION */
+
+/* START BLOG SECTION */
+#blog{
+    background-color: var(--fourth-color);
+}
+#blog .card{
+    box-shadow: 0 13px 8px -10px rgb(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+#blog .card-info a{
+    text-decoration: none;
+    color: var(--sixth-color);
+    transition: all 1s;
+}
+#blog .card-info a:hover{
+    color: var(--main-color);
+}
+#blog .image-custom img:hover{
+    color: var(--main-color);
+}
+#blog .badge{
+    background-color: var(--main-color);
+}
+#blog .blog-time p,
+#blog .blog-time i{
+    text-decoration: none;
+    color: var(--fivth-color);
+}
+#blog .image-custom{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+/* END BLOG SECTION */
+
+/* START CONTACT SECTION */
+#contact{
+    background-image: url(../images/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#contact .layer{
+    background-color: rgb(0, 120, 255, 0.7);
+}
+#contact .contact-header{
+    background-color: var(--third-color);
+}
+#contact h2{
+    color: var(--sixth-color);
+}
+#contact p{
+    font-size: 1.2rem;
+}
+#contact .contact-info ul{
+    list-style-type: none;
+}
+#contact .contact-info i{
+    color: var(--main-color);
+}
+#contact .icon{
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    transition: all 1s;
+}
+#contact .icon:hover{
+    border-color: var(--secondary-color);
+    background-color: var(--main-color);
+}
+#contact .icon:hover i{
+    color: var(--third-color);
+}
+#last .last-content a.one{
+    text-decoration: none;
+    color: var(--third-color);
+}
+#last .last-content p{
+    font-size: 1rem;
+}
+.last-icon .icons{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    bottom: 10px;
+    right: 15px;
+}
+/* END CONTACT SECTION */
+
+/* shared files */
+.section-header h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.section-header p::after{
+    content: "";
+    width: 2.5rem;
+    height: 4px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section-info h2{
+    position: relative;
+    font-size: 1.9rem;
+}
+.section-info h2::after{
+    content: "";
+    width: 18%;
+    height: 0.2rem;
+    position: absolute;
+    left: 0px;
+    bottom: -0.2rem;
+    background-color: rgb(0, 120, 255, 0.7);
+}
+
+
+
+
